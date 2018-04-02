@@ -30,6 +30,10 @@ export function createMatchPath(
     paths
   );
 
+  console.log("------------qwerty---------------");
+  console.log(absolutePaths);
+  console.log("------------qwerty---------------");
+
   return (
     requestedModule: string,
     readJson?: Filesystem.ReadJsonSync,
