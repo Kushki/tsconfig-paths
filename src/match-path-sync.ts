@@ -2,6 +2,7 @@ import * as path from "path";
 import * as Filesystem from "./filesystem";
 import * as MappingEntry from "./mapping-entry";
 import * as TryPath from "./try-path";
+import * as fs from "fs";
 
 /**
  * Function that can match a path
@@ -88,6 +89,12 @@ function findFirstExistingPath(
       console.log("------------TEST---------------");
       console.log(tryPath.path);
       console.log("------------TEST---------------");
+      console.log("------------FOLDER---------------");
+      const testFolder = tryPath.path;
+      fs.readdirSync(testFolder).forEach(file => {
+        console.log(file);
+      });
+      console.log("------------FOLDER---------------");
       if (fileExists(tryPath.path)) {
         console.log("------------FOUND---------------");
         console.log(tryPath.path);
