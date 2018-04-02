@@ -16,9 +16,6 @@ export function register(explicitParams: ExplicitParams): void {
     );
     return;
   }
-  console.log("------------qwerty---------------");
-  console.log(configLoaderResult);
-  console.log("------------qwerty---------------");
 
   const matchPath = createMatchPath(
     configLoaderResult.absoluteBaseUrl,
@@ -32,6 +29,9 @@ export function register(explicitParams: ExplicitParams): void {
   // tslint:disable-next-line:no-any
   Module._resolveFilename = function(request: string, _parent: any): string {
     const found = matchPath(request);
+    console.log("------------qwerty---------------");
+    console.log(request);
+    console.log("------------qwerty---------------");
     if (found) {
       const modifiedArguments = [found, ...[].slice.call(arguments, 1)]; // Passes all arguments. Even those that is not specified above.
       // tslint:disable-next-line:no-invalid-this

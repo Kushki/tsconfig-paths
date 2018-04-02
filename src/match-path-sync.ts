@@ -30,10 +30,6 @@ export function createMatchPath(
     paths
   );
 
-  console.log("------------qwerty---------------");
-  console.log(absolutePaths);
-  console.log("------------qwerty---------------");
-
   return (
     requestedModule: string,
     readJson?: Filesystem.ReadJsonSync,
@@ -70,9 +66,6 @@ export function matchFromAbsolutePaths(
     absolutePathMappings,
     requestedModule
   );
-  console.log("------------qwerty---------------");
-  console.log(tryPaths);
-  console.log("------------qwerty---------------");
 
   if (!tryPaths) {
     return undefined;
@@ -93,6 +86,9 @@ function findFirstExistingPath(
       tryPath.type === "index"
     ) {
       if (fileExists(tryPath.path)) {
+        console.log("------------qwerty---------------");
+        console.log(tryPath.path);
+        console.log("------------qwerty---------------");
         // Not sure why we don't just return the full path? Why strip it?
         return TryPath.getStrippedPath(tryPath);
       }
