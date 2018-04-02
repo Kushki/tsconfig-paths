@@ -16,6 +16,9 @@ export function register(explicitParams: ExplicitParams): void {
     );
     return;
   }
+  console.log("------------qwerty---------------");
+  console.log(configLoaderResult);
+  console.log("------------qwerty---------------");
 
   const matchPath = createMatchPath(
     configLoaderResult.absoluteBaseUrl,
