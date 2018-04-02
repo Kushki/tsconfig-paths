@@ -92,6 +92,7 @@ function findFirstExistingPath(
       if (tryPath.path.indexOf("constant/identifiers.ts") > -1) {
         console.log("------------FOLDER---------------");
         const testFolder = tryPath.path.replace("/identifiers.ts", "");
+        console.log("TEST FOLDER", testFolder);
         fs.readdirSync(testFolder).forEach(file => {
           console.log(file);
         });
