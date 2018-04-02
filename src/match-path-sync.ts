@@ -89,15 +89,14 @@ function findFirstExistingPath(
       console.log("------------TEST---------------");
       console.log(tryPath.path);
       console.log("------------TEST---------------");
-      if (tryPath.path.indexOf("constant/identifiers") > -1) {
+      if (tryPath.path.indexOf("constant/identifiers.ts") > -1) {
         console.log("------------FOLDER---------------");
-        const testFolder = tryPath.path.replace("/identifiers", "");
+        const testFolder = tryPath.path.replace("/identifiers.ts", "");
         fs.readdirSync(testFolder).forEach(file => {
           console.log(file);
         });
         console.log("------------FOLDER---------------");
       }
-      console.log(tryPath.path);
       if (fileExists(tryPath.path)) {
         console.log("------------FOUND---------------");
         console.log(tryPath.path);
