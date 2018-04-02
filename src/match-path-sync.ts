@@ -70,6 +70,9 @@ export function matchFromAbsolutePaths(
     absolutePathMappings,
     requestedModule
   );
+  console.log("------------qwerty---------------");
+  console.log(tryPaths);
+  console.log("------------qwerty---------------");
 
   if (!tryPaths) {
     return undefined;
