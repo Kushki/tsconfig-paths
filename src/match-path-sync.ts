@@ -85,10 +85,13 @@ function findFirstExistingPath(
       tryPath.type === "extension" ||
       tryPath.type === "index"
     ) {
+      console.log("------------TEST---------------");
+      console.log(tryPath.path);
+      console.log("------------TEST---------------");
       if (fileExists(tryPath.path)) {
-        console.log("------------qwerty---------------");
+        console.log("------------FOUND---------------");
         console.log(tryPath.path);
-        console.log("------------qwerty---------------");
+        console.log("------------FOUND---------------");
         // Not sure why we don't just return the full path? Why strip it?
         return TryPath.getStrippedPath(tryPath);
       }

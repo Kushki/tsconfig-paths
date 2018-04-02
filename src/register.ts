@@ -28,10 +28,10 @@ export function register(explicitParams: ExplicitParams): void {
   const originalResolveFilename = Module._resolveFilename;
   // tslint:disable-next-line:no-any
   Module._resolveFilename = function(request: string, _parent: any): string {
-    const found = matchPath(request);
     console.log("------------qwerty---------------");
     console.log(request);
     console.log("------------qwerty---------------");
+    const found = matchPath(request);
     if (found) {
       const modifiedArguments = [found, ...[].slice.call(arguments, 1)]; // Passes all arguments. Even those that is not specified above.
       // tslint:disable-next-line:no-invalid-this
