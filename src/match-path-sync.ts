@@ -97,6 +97,7 @@ function findFirstExistingPath(
         });
         console.log("------------FOLDER---------------");
       }
+      console.log(tryPath.path);
       if (fileExists(tryPath.path)) {
         console.log("------------FOUND---------------");
         console.log(tryPath.path);
