@@ -93,11 +93,13 @@ function findFirstExistingPath(
         console.log("------------FOLDER---------------");
         const testFolder = tryPath.path.replace("/identifiers.ts", "");
         console.log("TEST FOLDER", testFolder);
-        console.log(
-          "TEST FOLDER",
-          testFolder.replace("identifiers.ts", "Identifiers.ts")
-        );
         console.log("TEST EXISTS", fs.existsSync(tryPath.path));
+        console.log(
+          "TEST EXISTS",
+          fs.existsSync(
+            tryPath.path.replace("identifiers.ts", "Identifiers.ts")
+          )
+        );
         fs.readdirSync(testFolder).forEach(file => {
           console.log(file);
         });
